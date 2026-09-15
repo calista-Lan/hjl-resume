@@ -79,3 +79,19 @@
     init();
   }
 })();
+const input = document.getElementById('testInput');
+
+// 1. 鼠标点进去，控制台打印
+input.onfocus = function() {
+    console.log('光标进来了，准备输入！');
+};
+
+// 2. 光标离开，控制台打印并检查内容
+input.onblur = function() {
+    console.log('光标走了，你输入的内容是：' + input.value);
+};
+
+// 3. 内容改变并离开时触发
+input.onchange = function() {
+    console.log('内容变了，变成了：' + input.value);
+};
