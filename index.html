@@ -4,72 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>黄锦澜 - 简历</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="hjl.css">
+  <script src="hjl.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>黄 锦 澜</h1>
-    <div class="contact">
-      <span>中国 · 广东</span>
-      <p><a href="mailto:mdusbsssb@qq.com">mdusbsssb@qq.com</a></p>
-      <p><a href="tel:+8618927846419">(+86) 18927846419</a></p>
-      <p><a href="https://github.com/calista-Lan" target="_blank" rel="noopener">
-        github.com/calista-Lan
-      </a></p>
-    </div>
-  </header>
-
-  <main>
-    <section>
-      <h2>教育经历</h2>
-      <div class="item">
-        <div class="item-title">广东科学技术职业学院 · 计算机专业</div>
-        <div class="item-meta">25大模型应用产业学院班</div>
+  <div class="page">
+    <header class="header">
+      <h1>黄锦澜</h1>
+      <div class="contact">
+        <span>中国 · 广东</span>
+        <a href="mailto:mdusbsssb@qq.com">mdusbsssb@qq.com</a>
+        <a href="tel:+8618927846419">(+86) 18927846419</a>
+        <a href="https://github.com/calista-Lan" target="_blank" rel="noopener">github.com/calista-Lan</a>
       </div>
-    </section>
+    </header>
 
-    <section>
-      <h2>技能方向</h2>
-      <div class="skill-tags">
-        <span class="skill-tag">智能体系统设计</span>
-        <span class="skill-tag">前端框架应用开发</span>
-        <span class="skill-tag">边缘计算应用开发</span>
-        <span class="skill-tag">大模型应用开发</span>
-        <span class="skill-tag">编程框架开发</span>
-      </div>
-    </section>
+    <main>
+      <section class="section">
+        <h2>教育经历</h2>
+        <div class="item">
+          <div class="item-title">广东科学技术职业学院 · 计算机专业</div>
+          <div class="item-meta">25 大模型应用产业学院班</div>
+        </div>
+      </section>
 
-    <section>
-      <h2>项目经历</h2>
-      <div class="item">
-        <div class="item-title">目前无</div>
-        <div class="item-meta"></div>
-        <ul  class="fade-list">
-          <li >项目描述：ing</li>
-          <li>你的工作：ing</li>
-          <li>成果：ing</li>
-        </ul>
-      </div>
-    </section>
+      <section class="section">
+        <h2>技能方向</h2>
+        <div class="tags">
+          <span class="tag">智能体系统设计</span>
+          <span class="tag">前端框架应用开发</span>
+          <span class="tag">边缘计算应用开发</span>
+          <span class="tag">大模型应用开发</span>
+          <span class="tag">编程框架开发</span>
+        </div>
+      </section>
 
-    <section>
-      <h2>语言 · 证书</h2>
-      <ul>
-        <li>母语：中文</li>
-        <li>英语：CET-4</li>
-        <li>计算机一级</li>
-      </ul>
-    </section>
+      <section class="section">
+        <h2>项目经历</h2>
+        <div class="item">
+          <div class="item-title">目前无</div>
+          <ul class="dots">
+            <li><b>项目描述</b>：ing</li>
+            <li><b>你的工作</b>：ing</li>
+            <li><b>成果</b>：ing</li>
+          </ul>
+        </div>
+      </section>
 
-    <section>
-      <h2>兴趣爱好</h2>
-      <p>追剧、技术探索、开源实践</p>
-    </section>
-  </main>
+      <section class="section">
+        <h2>语言 · 证书</h2>
+        <div class="tags">
+          <span class="chip">母语：中文</span>
+          <span class="chip">英语：CET-4</span>
+          <span class="chip">计算机一级</span>
+        </div>
+      </section>
 
-  <footer class="no-print">
-    <button type="button" id="sendEmailBtn">发送邮件</button>
-  </footer>
+      <section class="section">
+        <h2>兴趣爱好</h2>
+        <p class="plain">追剧、技术探索、开源实践</p>
+      </section>
+    </main>
+
+    <footer class="actions no-print">
+      <button type="button" id="sendEmailBtn">发送邮件</button>
+      <button type="button" id="printBtn" class="ghost">打印 / 存为 PDF</button>
+    </footer>
+    <p id="sendEmailTip" class="tip no-print" role="status"></p>
+  </div>
 </body>
 </html>
