@@ -81,17 +81,49 @@
 })();
 const input = document.getElementById('testInput');
 
-// 1. 鼠标点进去，控制台打印
-input.onfocus = function() {
-    console.log('光标进来了，准备输入！');
-};
+// yanzheng
+// ========== 第一部分：你之前的基础练习（保留） ==========
+var char = 'A'
+console.log(char)
+console.log(typeof(char))
+var str = 'hello world'
+console.log(str)
+console.log(typeof(str))
+// 数值数据类型
+var num = 100
+console.log(num)
+console.log(typeof(num))
 
-// 2. 光标离开，控制台打印并检查内容
-input.onblur = function() {
-    console.log('光标走了，你输入的内容是：' + input.value);
-};
-
-// 3. 内容改变并离开时触发
-input.onchange = function() {
-    console.log('内容变了，变成了：' + input.value);
-};
+// ========== 第二部分：项目实战（简历按钮交互） ==========
+// 等待 HTML 页面加载完毕后再执行（因为你用了 defer，其实这里也可以直接写，但用这个更保险）
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. 获取按钮元素
+    var sendBtn = document.getElementById('sendEmailBtn');
+    
+    // 2. 如果找到了这个按钮，就给它绑定点击事件
+    if (sendBtn) {
+        sendBtn.onclick = function() {
+            // 使用 prompt 获取用户名字
+            var userName = prompt('请输入您的名字，以便我更好地回复您：');
+            
+            // 如果用户点了取消，或者没输入名字，就直接结束
+            if (!userName) {
+                alert('您取消了发送，输入不能为空哦！');
+                return;
+            }
+            
+            // 使用 confirm 二次确认
+            var isSend = confirm('您好 ' + userName + '，确定要发送邮件吗？');
+            
+            if (isSend) {
+                // 使用 alert 提示
+                alert('准备跳转到邮件应用...');
+                // 核心：拼接邮件内容并跳转
+                var emailUrl = "mailto:mdusbsssb@qq.com?subject=来自简历的沟通&body=你好，我是" + encodeURIComponent(userName);
+                window.location.href = emailUrl;
+            } else {
+                alert('已取消发送');
+            }
+        };
+    }
+});
