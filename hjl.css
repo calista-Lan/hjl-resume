@@ -1,4 +1,7 @@
 /* ===== 黄锦澜 · 简历样式 =====
+   设计目标：单页 A4 紧凑排版 / 层次清晰 / 屏幕与打印双优
+   --------------------------------------------------------- */
+
 :root {
   --text: #1f2328;
   --soft: #374151;
@@ -32,7 +35,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-
+/* 纸张容器：屏幕上像一张纸，打印时变成真正的纸 */
 .page {
   max-width: 780px;
   margin: 0 auto;
@@ -62,6 +65,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 3px 18px; /* 用间距代替分隔符，折行时不会留下孤立的 · */
   margin-top: 8px;
   font-size: 12.5px;
   color: var(--muted);
@@ -69,13 +73,6 @@ h1 {
 
 .contact > * {
   white-space: nowrap;
-}
-
-/* 分隔点：由 CSS 生成，无需手写 ·  */
-.contact > *:not(:first-child)::before {
-  content: "·";
-  margin: 0 9px;
-  color: #c9ced6;
 }
 
 .contact a {
@@ -214,17 +211,6 @@ button {
   border-color: var(--accent-dark);
 }
 
-button.ghost {
-  color: var(--soft);
-  background: #fff;
-  border-color: #d3d8de;
-}
-
-button.ghost:hover {
-  color: #111827;
-  border-color: #9aa3ad;
-}
-
 .tip {
   margin-top: 10px;
   font-size: 12.5px;
@@ -247,10 +233,7 @@ button.ghost:hover {
 
   .contact {
     font-size: 12px;
-  }
-
-  .contact > *:not(:first-child)::before {
-    margin: 0 7px;
+    gap: 2px 12px;
   }
 }
 
